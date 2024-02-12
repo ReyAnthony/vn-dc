@@ -1,0 +1,27 @@
+1707775551 [INFO]   [morstairs\main.c] in SDL_main() @ L 42 // Program started.
+1707775551 [INFO]   [morstairs\engine.c] in ENGINE_init() @ L 43 // Initialising ENGINE.
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 73 // Initialising GFX Engine
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 74 // Starting up SDL 1.2
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 88 // Setting up video mode and requesting an OpenGL context
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 97 // GLEW Init.
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 111 // All clear ! Let's draw !
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 113 // Renderer : NVIDIA GeForce RTX 3060/PCIe/SSE2
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 114 // Renderer : 4.6.0 NVIDIA 546.33
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in GFX_init() @ L 117 // Allocating the overlay for Windows
+1707775551 [ERROR]  [morstairs\gfx\gfx_opengl_backend.c] in load_png() @ L 403 // Could not load romdisk/16_9_overlay.png, is the file missing ?
+1707775551 [ERROR]  [morstairs\gfx\gfx_opengl_backend.c] in internal_allocate() @ L 285 // TXR Could not load romdisk/16_9_overlay.png, aborting.
+1707775551 [TRACE]  [morstairs\gfx\quick_lists.c] in ql_create_list() @ L 6 // Creating a new QList
+1707775551 [INFO]   [morstairs\text\text.c] in TEXT_init() @ L 26 // Initliasing TEXT engine.
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in internal_allocate() @ L 289 // TXR loading 1, romdisk/font.png
+1707775551 [INFO]   [morstairs\text\text.c] in TEXT_init() @ L 54 // TEXT Engine Init OK.
+1707775551 [INFO]   [morstairs\audio\audio.c] in AUDIO_init() @ L 14 // Audio engine is initializing
+1707775551 [INFO]   [morstairs\audio\audio.c] in AUDIO_init() @ L 27 // Audio engine has initialized
+1707775551 [INFO]   [morstairs\vn\game.c] in GAME_init() @ L 34 // Starting to init GAME.
+1707775551 [INFO]   [morstairs\engine.c] in ENGINE_subsystem_bind() @ L 139 // Binding a subsystem (id 0)
+1707775551 [INFO]   [morstairs\vn\game.c] in main_menu_init() @ L 82 // GAME (main menu holder) init startup
+1707775551 [INFO]   [morstairs\menus\menu.c] in MENU_init() @ L 40 // Initialising MENU system
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in internal_allocate() @ L 289 // TXR loading 2, romdisk/arrow.png
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in internal_allocate() @ L 289 // TXR loading 3, romdisk/classroom.png
+1707775551 [INFO]   [morstairs\menus\menu.c] in MENU_init() @ L 82 // MENU system initialised
+1707775551 [INFO]   [morstairs\gfx\gfx_opengl_backend.c] in internal_allocate() @ L 289 // TXR loading 4, romdisk/title.png
+1707775551 [INFO]   [morstairs\vn\game.c] in GAME_init() @ L 55 // GAME loaded.

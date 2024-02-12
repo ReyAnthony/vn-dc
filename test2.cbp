@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vn-gfx" />
+		<Option pch_mode="2" />
+		<Option compiler="dc-gcc" />
+		<Build>
+			<Target title="Dreamcast Debug">
+				<Option output="bin/Debug/test2.sys" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="5" />
+				<Option compiler="dc-gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-std=c99" />
+					<Add option="-g -Wa,-g -Wl,-g" />
+					<Add option="-DDEBUG" />
+					<Add option="-DDC" />
+				</Compiler>
+				<Linker>
+					<Add option="obj\Debug\romdisk.o   -ltremor -lparallax -lpng -lkosutils -lkmg -lz -ljpeg -lm -lgl" />
+				</Linker>
+			</Target>
+			<Target title="Dreamcast KGL">
+				<Option output="bin/Release/test2.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="5" />
+				<Option compiler="dc-gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-std=c99" />
+					<Add option="-DRELEASE" />
+					<Add option="-DDC" />
+				</Compiler>
+				<Linker>
+					<Add option="obj\Release\romdisk.o -ltremor -lparallax -lpng -lkosutils -lkmg -lz -ljpeg -lgl  -lm" />
+				</Linker>
+			</Target>
+			<Target title="Dreamcast GLDC">
+				<Option output="bin/Release/test2.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="5" />
+				<Option compiler="dc-gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-std=c99" />
+					<Add option="-DRELEASE" />
+					<Add option="-DDC" />
+					<Add option="-DGLDC" />
+				</Compiler>
+				<Linker>
+					<Add option="obj\Release\romdisk.o -ltremor -lparallax -lpng -lkosutils -lkmg -lz -ljpeg -lgldc  -lm" />
+				</Linker>
+			</Target>
+			<Target title="Dreamcast PVR">
+				<Option output="bin/Release/test2.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="5" />
+				<Option compiler="dc-gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-std=c99" />
+					<Add option="-DRELEASE" />
+					<Add option="-DDC" />
+				</Compiler>
+				<Linker>
+					<Add option="obj\Release\romdisk.o -ltremor -lparallax -lpng -lkosutils -lkmg -lz -ljpeg -lm" />
+				</Linker>
+			</Target>
+			<Target title="PC GL">
+				<Option output="bin/PCGL/test2" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-std=c99" />
+					<Add option="-DPC" />
+				</Compiler>
+				<Linker>
+					<Add option="-lmingw32 -lSDLmain -lSDL C:\MinGW\lib\SDL_mixer.lib  -static-libgcc -lglew32 -lglu32  -lopengl32" />
+				</Linker>
+			</Target>
+			<Environment>
+				<Variable name="DREAMSDK_MKRDOBJ" value="C:\DreamSDK\msys\1.0\opt\dreamsdk\ide\mkrdobj.cmd" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="SDL" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="$(DREAMSDK_MKRDOBJ) $(PROJECT_DIR) $(TARGET_OBJECT_DIR) $(TARGET_OUTPUT_FILE)" />
+		</ExtraCommands>
+		<Unit filename="_third_party/stb_image.h">
+			<Option target="PC GL" />
+		</Unit>
+		<Unit filename="_third_party/stb_init.c">
+			<Option compilerVar="CC" />
+			<Option target="PC GL" />
+		</Unit>
+		<Unit filename="audio/audio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="audio/audio.h" />
+		<Unit filename="constants.h" />
+		<Unit filename="engine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="engine.h" />
+		<Unit filename="gfx/arch/gfx_pvr.h">
+			<Option target="Dreamcast Debug" />
+			<Option target="Dreamcast KGL" />
+			<Option target="Dreamcast GLDC" />
+			<Option target="Dreamcast PVR" />
+		</Unit>
+		<Unit filename="gfx/gfx.h" />
+		<Unit filename="gfx/gfx_opengl_backend.c">
+			<Option compilerVar="CC" />
+			<Option target="Dreamcast Debug" />
+			<Option target="Dreamcast KGL" />
+			<Option target="Dreamcast GLDC" />
+			<Option target="PC GL" />
+		</Unit>
+		<Unit filename="gfx/gfx_pvr_backend.c">
+			<Option compilerVar="CC" />
+			<Option target="Dreamcast PVR" />
+		</Unit>
+		<Unit filename="gfx/quick_lists.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx/quick_lists.h" />
+		<Unit filename="helpers.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menus/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menus/menu.h" />
+		<Unit filename="path_helpers.h" />
+		<Unit filename="paths.h" />
+		<Unit filename="romdisk/arrow.png" />
+		<Unit filename="romdisk/classroom.png" />
+		<Unit filename="romdisk/font.png" />
+		<Unit filename="romdisk/title.png" />
+		<Unit filename="romdisk/yugi.png" />
+		<Unit filename="text/text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="text/text.h" />
+		<Unit filename="vn/game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vn/game.h" />
+		<Unit filename="vn/vn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vn/vn.h" />
+		<Extensions>
+			<debugger>
+				<remote_debugging target="Dreamcast Debug">
+					<options conn_type="0" ip_address="localhost" ip_port="2159" loader_waiting_time="0" />
+				</remote_debugging>
+			</debugger>
+			<code_completion />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
